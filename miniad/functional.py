@@ -532,6 +532,8 @@ class MSELoss(Function):
         y = out.save_for_backward
         N = len(y)
         dx = 2 * (y_hat.data - y) / N
+        dx *= out_grad
+        
         y_hat.grad = dx if y_hat.grad is None else y_hat.grad + dx
 
         return (y_hat, )
