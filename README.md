@@ -1,2 +1,3 @@
 # MiniAD
-a mini automatic differentiation engine
+
+Another mini autograd engine with a PyTorch-like API.
